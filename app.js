@@ -4,6 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+// this is the configuration where the router is defined
+// Router is the main entry point that is defined here
+// In the router the defination of view and conmtroller is given
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
