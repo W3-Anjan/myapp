@@ -26,23 +26,22 @@ exports.get_landing = function(req, res, next) {
       };
       
       return axios.request(options).then(function (response) {
-          console.log('Status Code:', response.status);
-          console.log(response.data);
-          if(response.status == 200){
-            res.render('index', { title: 'Weather Api', place: response.data.location.name,
+          //console.log('Status Code:', response.status);
+          //console.log(response.data);
+          
+            res.render('index', { title: 'Weather Api', res_code: response.status,
+            place: response.data.location.name,
             region: response.data.location.region,
             country: response.data.location.country,
             temp_c: response.data.current.temp_c,
             temp_f: response.data.current.temp_f,
             condition: response.data.current.condition.text,
             icon: response.data.current.condition.icon});
-          }
-          else{
-            res.render('index', { title: 'Weather Api', place: "Location is incorrect"});
-          }
+         
                                 
       }).catch(function (error) {
-          console.error(error);
+          //console.error('Error Code:' + error);
+          res.render('index', { title: 'Weather Api', place: "The Location is incorrect"});
       });
 
 }

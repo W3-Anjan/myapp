@@ -55,7 +55,7 @@ function changeTempIndex(celsius){
 
     }else{
 
-        
+    
         tempElement.innerHTML = `${celsius}°<span>C</span>`;
         weather.temperature.unit = "celsius"
     }

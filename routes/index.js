@@ -9,7 +9,7 @@ let landing = require('../controllers/landing')
 /* GET home page. */
 router.get('/', landing.index_landing);
 router.get('/all/usa/:q', landing.get_landing);
-router.post('/', landing.get_weather);
+
 
 
 
