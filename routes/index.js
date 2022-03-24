@@ -1,5 +1,5 @@
 
-
+// hbs = handle bars
 var express = require('express');
 var router = express.Router();
 
@@ -7,8 +7,11 @@ var router = express.Router();
 let landing = require('../controllers/landing')
 
 /* GET home page. */
-router.get('/', landing.get_landing);
+router.get('/', landing.index_landing);
+router.get('/all/usa/:q', landing.get_landing);
+router.post('/', landing.get_weather);
 
-router.post('/', landing.submit_lead);
 
+
+// without export it can't be used
 module.exports = router;

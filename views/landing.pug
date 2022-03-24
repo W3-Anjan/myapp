@@ -1,9 +1,36 @@
-extends layout
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Pug templating Engine
+    body
+     
+     p Welcome to #{title}
+     
 
-block content
-  h1= title
-  p Welcome to #{title}
-  form(action="/", method="POST")
-    input(name="lead_email", type="email", placeholder="Enter your email address")
-    button(type="submit") Submit
+     form(action="/", method="POST")
+      input(name="lead_email", type="email", placeholder="Enter your email address")
+      button(type="submit") Submit
+      
+     p Weather Data #{weather} 
+ 
+
+
+
+
+//- extends layout
+
+//- block content
+//-   h1= title
+//-   p Welcome to #{title}
+//-   p Leads are #{leads}
+
+//-   form(action="/", method="POST")
+//-     input(name="lead_email", type="email", placeholder="Enter your email address")
+//-     button(type="submit") Submit
+
+  
+  
+    
 

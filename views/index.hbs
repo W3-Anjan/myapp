@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <link rel="stylesheet" href="/stylesheets/style.css"/> <!-- static path for public folder is already set in app.js -->
+    </head>
+    <body>
+        <div class="main-content">
+            {{>header}}
+            
+            <article class="widget">
+                <label class="switch">
+                    <input type="checkbox" onchange="changeTempIndex({{temp_c}})">
+                    <span class="slider round"></span>
+                </label>
+                {{!-- <form class="weatherLocation"><input placeholder="location..." type = "text"/><button>Seach</button>
+                </form> --}}
+                <div class="weatherIcon">
+                    <img src={{icon}} alt="weather">
+                </div>
+                <div class="weatherInfo">
+                    <div class="temperature"><span>{{temp_c}}°C</span></div>
+                    <div class="description">    
+                        <div class="weatherCondition">{{condition}}</div>    
+                        <div class="place">
+                            {{place}}, {{region}}, {{country}}
+                        </div>
+                    </div>
+                </div>
+                <div class="date"></div>
+            </article>
+        </div>
+        <script src="/javascripts/app.js"></script> <!-- absolute path -->
+        
+    </body>
+</html>
