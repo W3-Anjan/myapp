@@ -21,7 +21,7 @@ exports.get_landing = function(req, res, next) {
         params: {q: req.params['q'], days: '30'},
         headers: {
           'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com',
-          'X-RapidAPI-Key': 'ee63f3b69emshb06b9bf5709e36fp1eb79cjsn083704c21ec0'
+          'X-RapidAPI-Key': 'Enter your key here'
         }
       };
       
